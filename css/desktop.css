@@ -1,0 +1,218 @@
+    <style>
+        * { 
+            margin: 0; padding: 0;
+            font-family: '맑은 고딕', 'Malgun Gothic', Gothic, sans-serif;
+        }
+        a { text-decoration: none; }
+        li { list-style: none; }
+    <!-- 기본 클래스 -->
+        .pull-left { float: left; }
+        .pull-right { float:right; }
+  
+    <!-- 페이지 -->
+  
+        body {
+            width: 960px; margin: 0 auto;
+            background: #E6E6E6;
+            color : #FFFFFF;
+        }
+
+        #page-wrapper {
+            background: #252525;
+            margin: 40px 0; padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+        }
+  
+    <!-- 헤더 -->
+    <style>
+        #main-header { padding: 40px 50px; }
+        #main-header .name 
+            {color: #47ece5; 
+             font-weight:bold;
+             font-size:30px;}
+
+        #main-header .master-description {
+            font-size: 20px; font-weight: 500;
+            color: #FFFFFF;
+        }
+    </style>
+    <!-- 네비게이션 -->
+    <style>
+        #main-navigation {
+            border-top: 1px solid  #47ece5;
+            border-bottom: 1px solid #47ece5;
+            margin-bottom: 15px;
+            height: 50px;
+        }
+        
+        .outer-menu-item {
+            float: left;
+            position: relative;
+            padding :0;
+            line-height :40px;  height: 50px;
+        }
+        .outer-menu-item:hover {
+            display: block;
+            background:  #47ece5;
+            color: #FFFFFF;
+        }
+
+        .menu-title {
+            display: block;
+            height: 50px; line-height :40px;
+            text-align: center;
+            padding: 5px 60px;
+        }
+
+        .inner-menu {
+            display: none;
+            position: absolute;
+            top: 50px; left: 0;
+            width: 100%;
+
+            background: white;
+            box-shadow: 0 2px 6px rgba(5, 5, 5, 0.9);
+            z-index: 1000;
+
+            text-align: center
+        }
+
+        .inner-menu-item > a {
+            display: block;
+            padding: 5px 10px;
+            color: black
+        }
+
+        .inner-menu-item > a:hover {
+            background: black;
+            color: white;
+        }
+    </style>
+    <!-- 네비게이션 내부의 검색 -->
+    <style>
+        .search-bar {
+            height: 26px;
+            padding: 7px;
+        }
+        .input-search {
+            display: block;
+            float: left;
+
+            background-color: #FFFFFF;
+            border: 1px solid #CCCCCC;
+            border-radius: 15px 0 0 15px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+            width: 120px; height: 24px;
+            padding: 0 0 0 10px;
+            font-size: 12px;
+            color: #555555;
+        }
+
+        .input-search:focus {
+            border-color: rgba(82, 168, 236, 0.8);
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+
+        .input-search-submit {
+            display: block;
+            float: left;
+
+            width: 50px; height: 26px;
+            border-radius: 0 15px 15px 0;
+            border: 1px solid #CCCCCC;
+
+            margin-left: -1px;
+
+            vertical-align: top;
+            display: inline-block;
+        }
+    </style>
+    <!-- 중앙 내용 -->
+    <style>
+        #content { overflow: hidden; }
+        #main-section {
+            float: left;
+            width: 710px;
+        }
+        #main-aside {
+            float: right;
+            width: 200px;
+        }
+    </style>
+    <!-- 좌측 내용물 -->
+    <style>
+        article { 
+            padding: 0 10px 20px 10px;
+            border-bottom: 1px solid #C8C8C8;
+        }
+
+        .article-header { padding: 20px 0; }
+        .article-title { 
+            font-size: 25px;
+            font-weight: 500; 
+            padding-bottom: 10px;
+        }
+        .article-date { font-size: 13px; }
+        .article-body {
+            font-size: 14px;
+        }
+    </style>
+    <!-- 우측 구성 -->
+    <style>
+        .aside-list { padding: 10px 0 30px 0; }
+        .aside-list > h3 {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .aside-list li a {
+            margin-left: 8px;
+            font-size: 13px;
+            color: #6C6C6C;
+        }
+    </style>
+    <style>
+        #gallery {
+            border: 10px solid #1D0C16; /* 굵은 테두리 */
+            height: 300px; /* 높이 */
+            width: 450px; /* 너비 */ 
+            margin-left: auto; /* 여백 자동 */
+            margin-right: auto;
+            overflow: visible; /* 오버플로일 경우 visible로 */
+            background: #272229; /* 배경색 */
+            box-shadow: #888888 10px 10px 20px;
+            }
+        #gallery ul{
+            margin-left:-5px; /* 갤러리 가운데에 콘텐츠가 올 수 있도록 */
+            }
+
+        /* 썸네일 각 항목에 대한 스타일 */
+        #gallery ul li {
+            list-style:none;  /* 불릿 없앰 */
+            display:inline-table; /* 테이블 스타일로 배치*/
+            padding:12px; /* 안여백은 각각 10px로 */
+        }
+             
+        /* 평소 큰 이미지 .pic 에 대한 스타일 */
+        #gallery ul li .pic{
+               opacity:0; /* 페이드아웃 효과 */
+               visibility:hidden; /* 처음에는 보이지 않게 */ 
+               position:absolute; /* 고정 위치 */
+               margin-top: 30px; /* 상단 여백 */
+               margin-left:-50px; /* 왼쪽으로 20픽셀 이동해서 */
+               border:2px solid black; /* 검은색 테두리 그림 */
+               box-shadow:#272229 2px 2px 10px; /* 박스 그림자 */ 
+            } 
+            #gallery ul li:hover .pic {
+               width:320px; /* 너비 */
+               height:240px; /* 높이 */
+               opacity:1; /* 불투명하게 */
+               visibility:visible; /* 화면에 보임 */
+               float:right; /* 오른쪽으로 플로팅 */
+            }
+            #gallery ul li .small:hover{
+                cursor:pointer;
+            }
+    </style>

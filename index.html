@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="w3.css">
+<title>Welcome to Seongwon HomePage</title>
+<style>
+   a { text-decoration: none;}
+   li { list-style : none;}
+   .mySlides {display:none}
+   .w3-left, .w3-right, .w3-badge {cursor:pointer} 
+   .w3-badge {height:13px;width:13px;padding:0}
+   footer {
+      clear:both;
+    
+    }
+    aside#right{
+      float:right;
+    }
+</style>
+<script> /* 아래쪽  Tab 사용을 위해 자바스크립트 작성 */
+/* openClass('notify')  DOM이 만들어질때 실행하도록 하였음 */
+function openClass(gubun) {
+    var i;
+    var x = document.getElementsByClassName("gubun");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    document.getElementById(gubun).style.display = "block";
+}
+</script>
+</head>
+<body class="w3-content w3-margin-top" style="max-width:1000px" onload=openClass('notify');>
+ <header class="w3-margin-top w3-contaner">
+      <span class="w3-opennav w3-xlarge">&#9776;</span>
+  	  <a href="index.html"><span class="w3-text-indigo w3-text-shadow" style="font-size:24px;"> Seongwon Hwang </span> </a> <span class="w3-text-black"> 강의사이트 </span>
+  	  <h5> 동아대학교 경영정보학과</h5>
+  </header>
+  <nav>
+  	<ul class="w3-navbar w3-card-4 w3-indigo w3-center">
+    	<li class="w3-dropdown-hover w3-indigo"  style="width:15%"><a href="#" class="w3-padding-large"> 소&#32;&#32;&#32;개  </a>
+  	        <div class="w3-dropdown-content w3-white w3-card-4">
+		      <a href="index.html">Home</a>
+		      <a href="profile.html">Profile</a>
+		      <a href="gallery.html">Gallery</a>
+            </div>
+         </li>
+         <li class="w3-dropdown-hover w3-indigo"  style="width:15%"><a href="#" class="w3-padding-large"> 강의&#32;자료  </a>
+  	        <div class="w3-dropdown-content w3-white w3-card-4 ">
+		      <a href="#">데이터마이닝</a>
+		      <a href="#">빅데이터 시각화</a>
+		      <a href="#">웹프로그래밍</a>
+		      <a href="#">프로그래밍 언어</a>
+		      <a href="#">빅데이터 분석</a>
+            </div>
+         </li>
+         <li class="w3-dropdown-hover w3-indigo"  style="width:15%"><a href="#" class="w3-padding-large"> 관심&#32;분야  </a>
+  	        <div class="w3-dropdown-content w3-white w3-card-4 ">
+		      <a href="#">데이터마이닝</a>
+		      <a href="#">빅데이터 분석</a>
+		      <a href="#">인공지능</a>
+		      <a href="#">정보기술</a>
+         </div>
+         </li>      
+  	     <li style="width:15%"><a href="#" class="w3-padding-large w3-hover-grey"> News</a></li>
+         <li style="width:10%" class="w3-right"> <!--  w3.css modal 화면이 나타탐(아래 확인) -->
+	         <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-padding-large w3-hover-red"> <i class="fa fa-search"></i></button>
+  	     </li>
+  	</ul>
+  	<div id="id01" class="w3-modal"> <!-- w3.css modal입니다 -->
+    <div class="w3-modal-content">
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-closebtn">&times;</span>
+        <h3>검색한 내용입니다.</h3>
+       </header>
+      <div class="w3-container">
+        <p></p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+        <p>Some text..</p>
+      </div>
+    </div>
+   </div>
+  </nav>
+   <section  id="main" class="w3-left w3-container w3-margin-top"> <!-- section start -->
+  	  <article  id="article1">
+          <div class="w3-content w3-display-container" style="max-width:700px">  <!--  w3-Slideshow -->
+				  <img class="mySlides" src="./images/img_nature_wide.jpg" style="width:100%">
+				  <img class="mySlides" src="./images/img_fjords_wide.jpg" style="width:100%">
+				  <img class="mySlides" src="./images/img_mountains_wide.jpg" style="width:100%">
+					  <div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width:100%">
+						    <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+						    <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+						    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+						    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+						    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                      </div>
+          </div>
+          <script>
+				var slideIndex = 1;
+				showDivs(slideIndex);
+				
+				function plusDivs(n) {
+				  showDivs(slideIndex += n);
+				}
+				
+				function currentDiv(n) {
+				  showDivs(slideIndex = n);
+				}
+				
+				function showDivs(n) {
+				  var i;
+				  var x = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("demo");
+				  if (n > x.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = x.length}
+				  for (i = 0; i < x.length; i++) {
+				     x[i].style.display = "none";
+				  }
+				  for (i = 0; i < dots.length; i++) {
+				     dots[i].className = dots[i].className.replace(" w3-white", "");
+				  }
+				  x[slideIndex-1].style.display = "block";
+				  dots[slideIndex-1].className += " w3-white";
+				}
+       </script>
+  	  </article>
+  	  <article  id="article2" style="height: 300px; ">
+  	     <ul class="w3-navbar w3-margin-top ">
+		  <li><a class="w3-padding-large w3-hover-indigo" href="#" onclick="openClass('notify')">공지사항</a></li>
+		  <li><a class="w3-padding-large w3-hover-indigo" href="#" onclick="openClass('qna')">Q&A</a></li>
+		  <li><a class="w3-padding-large w3-hover-indigo" href="#" onclick="openClass('news')">최신정보</a></li>
+		</ul>
+		
+		<div id="notify" class="w3-section w3-border gubun" style="height:200px;">
+		  <h3>공지사항</h3>
+		  <p>웹사이는 리뉴얼 중입니다.</p>
+		</div>
+		
+		<div id="qna" class="w3-section w3-border gubun " style="height:200px;">
+		  <h3>Q&A</h3>
+		  <p>여기는 질의응답이 들어하는 부분입니다</p>
+		</div>
+		
+		<div id="news" class="w3-section w3-border gubun" style="height:200px;">
+		  <h3>News</h3>
+		  <p>여기는 최신정보가 들어가는 부분입니다.</p>
+        </div>
+  	</article>
+  </section> <!-- main contents(section)은 article1과 article2로 구분 -->
+  
+  <aside id="right" class="w3-display-container" style="max-width:250px">
+        <div id="login" class="w3-container" >
+            <h4 class="w3-text-indigo">Log In</h4>
+            <form action="#" >
+                                아이디  :<input class="w3-input1" type="text" /> <br />
+                               패스워드:<input class="w3-input1" type="password" /> <br /><br />
+                <input class="w3-btn w3-teal" type="submit" value="로그인" />
+                <input class="w3-btn w3-teal" type="reset" value="초기화" /><br />
+                <a href="register.html" target="_blank" id="register">회원가입</a>
+                <a href="#" id="forgot">비밀번호분실</a>
+            </form>
+        </div>
+        <div id="aside-list-1"  >
+            <h5 class="w3-text-indigo">즐겨찾기</h5>
+                    <ul>
+                        <li><a href="http://kostat.go.kr">통계청</a></li>
+                        <li><a href="http://bicdata.com">빅데이터</a></li>
+                        <li><a href="http://www.r-project.org/">R-project</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                    </ul>
+            <a href="bookmark.html">북마크 보기 </a>
+        </div>
+        <div id="aside-list-2" >
+                    <h4 class="w3-text-indigo">최근 글</h4>
+                    <ul>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                    </ul>
+         </div>
+        
+  </aside>
+  <footer  class="w3-dark-grey"  style="height:150px;">
+  <div class="w3-row"> <!-- grid 를 이용하여 작성하였음  -->
+	  <div class="w3-col s4  w3-container" >
+	      <h5> Contact Us</h5>
+          <ul>
+            <li>Phone: 010 5280 ****</li>
+            <li>Email: <a href="mailto:sense64@gmail.com" title="Email Us">sense64@gmail.com</a></li>
+            <li><a href="http://168.115.128.42:8008">http://www.donga.ac.kr/sense64</a></li>
+          </ul>
+          
+	  </div>
+	  <div class="w3-col s4  w3-container" >
+	      <h5> Follow Us</h5>
+	      <a href="https://www.facebook.com/swhwang64"><i class="fa fa-facebook" style="font-size:30px;color:white"></i></a>
+          <a href="https://twitter.com/sense64"><i class="fa fa-twitter" style="font-size:30px;color:white"></i></a>
+          <a href="#"><i class="fa fa-instagram" style="font-size:30px;color:white"></i></a>
+          <br /><br/>
+	      Copyright (c) 2016 SeonwonHwang <br/>
+	  </div>
+	  <div class="w3-col s4 w3-container" >
+	      <h5> About Us</h5>
+            My Site is optimized for learning, testing, and training.It something special for your.
+            <a href="#" class="btn btn-block btn-base btn-icon fa-check"><span>Try it now</span></a>
+          
+	  </div>
+   </div>
+   
+   </footer>
+</body>
+</html>

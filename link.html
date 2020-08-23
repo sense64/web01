@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HongGilDong Site</title>
+     <!-- 초기화  -->
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="css/desk.css" media="screen and (min-width: 481px)" />
+    <link rel="stylesheet" type="text/css" href="css/mphone.css" media="only screen and (max-width: 480px)" />
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script>
+        if (window.innerWidth && window.innerWidth > 480) {
+        $(document).ready(function () {
+            $('.outer-menu-item').hover(function () {
+                $(this).find('.inner-menu').show();
+            }, function () {
+                $(this).find('.inner-menu').hide();
+            });
+        });
+        }
+        else if (window.innerWidth && window.innerWidth <= 480) {
+        $(document).ready(function(){ 
+        $('#main-navigation ul').addClass('hide'); 
+        $('#main-navigation').append('<div class="leftButton" onclick="toggleMenu()">Menu</div>');
+         }); 
+        function toggleMenu() {
+        $('#main-navigation ul').toggleClass('hide'); 
+        $('#main-navigation .leftButton').toggleClass('pressed');
+       }
+      }
+   </script>
+</head>
+<body>
+    <div id="page-wrapper">
+        <header id="main-header">
+            <hgroup>
+                <h2> <a href="./"><span class="name">황성원</span> 강의사이트 </a></h2>
+                <h2 class="master-description">동의대학교</h2>
+            </hgroup>
+        </header>
+        <nav id="main-navigation">
+            <div class="pull-left">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">소개</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="index.html">About</a></li>
+                            <li class="inner-menu-item"><a href="profile.html">Profile</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">강의자료</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="#">경영통계</a></li>
+                            <li class="inner-menu-item"><a href="link.html">웹기획 및 디자인</a></li>
+                            <li class="inner-menu-item"><a href="#">프로그래밍 언어</a></li>
+                            <li class="inner-menu-item"><a href="#">웹프로그래밍</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">관심분야</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="#">데이터마이닝</a></li>
+                            <li class="inner-menu-item"><a href="#">빅데이터</a></li>
+                            <li class="inner-menu-item"><a href="#">데이터시각화</a></li>
+                            <li class="inner-menu-item"><a href="#">CRM</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-right">
+                <div class="search-bar">
+                    <form>
+                        <input type="text" class="input-search" />
+                        <input type="submit" class="input-search-submit" value="검색" />
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div id="content">
+            <section id="main-section">
+                <article>
+                    <div class="article-header">
+                        <h1 class="article-title"> 웹기획 자료 </h1>
+                        <p class="article-date">updated : 2016년 06월 02일</p>
+                    </div>
+                    <div class="article-body" align="center">
+                  <table class="aw">
+                    <br />
+                    <br />
+                  <tr>
+                    <th>년도</th><th>제목 </th>
+                  </tr>
+                  <tr>
+                  <td rowspan="6">2006</td><td><a href="http://168.115.128.42:8008/2006/P1/index.html"> 부산 재활용 센터 </a> </td>
+                  <tr> <td><a href="http://168.115.128.42:8008/2006/P1/buy/index.html"> 부산 재활용 센터(사실래요) </a> </td> </tr>
+                  <tr> <td><a href="http://168.115.128.42:8008/2006/P1/sale/index.html"> 부산 재활용 센터(파실래요) </a> </td> </tr>
+                  <tr> <td><a href="http://168.115.128.42:8008/2006/P1/my/index.html"> 부산 재활용 센터(배송정보) </a> </td> </tr>
+                  <tr> <td><a href="http://168.115.128.42:8008/2006/P1/shop/index.html"> 부산 재활용 센터(매장정보) </a> </td> </tr>
+                  <tr> <td><a href="http://168.115.128.42:8008/2006/P1/com/index.html"> 부산 재활용 센터(커뮤니티) </a> </td> </tr>
+                 </tr>
+
+               <tr>
+                  <td>2006</th><td><a href="http://168.115.128.42:8008/2006/P2/index.html"> 이미지 제작 </a> </td>
+               </tr>
+               <tr>
+                  <td>2007</th><td><a href="http://168.115.128.42:8008/2007/P1/index.html"> All in Photo </a> </td>
+               </tr>
+               <tr>
+                  <td>2009</th><td><a href="http://168.115.128.42:8008/2009/P1/index.html"> 전국 특산물  </a> </td>
+               </tr>
+                <tr>
+                  <td>2009</th><td><a href="http://168.115.128.42:8008/2009/P2/index.html"> 도시락 유혹 </a> </td>
+               </tr>
+               <tr>
+                  <td>2009</th><td><a href="http://168.115.128.42:8008/2009/P3/index.html"> 반찬의 여왕  </a> </td>
+               </tr>
+                  <tr>
+                  <td>2009</th><td><a href="http://168.115.128.42:8008/2009/P4/index.html"> 커피  </a> </td>
+               </tr>
+               </tr>
+                  <tr>
+                  <td>2011</th><td><a href="http://168.115.128.42:8008/2011/P1/index.html"> 커피  </a> </td>
+               </tr>
+                </tr>
+                  <tr>
+                  <td>2011</th><td><a href="http://168.115.128.42:8008/2011/P2/index.html"> LP  </a> </td>
+               </tr>
+               </tr>
+                  <tr>
+                  <td>2014</th><td><a href="http://168.115.128.42:8008/2014/P1/index.html"> 맛탐 </a> </td>
+               </tr>
+               </tr>
+                  <tr>
+                  <td>2015</th><td><a href="http://168.115.128.42:8008/2015/P1/index.html"> Memories Visualizing Planner  </a> </td>
+               </tr>
+               </tr>
+                  <tr>
+                  <td>2015</th><td><a href="http://168.115.128.42:8008/2015/P2/index.html"> 홍차 커뮤니티 </a> </td>
+               </tr>
+            </table>
+             <br />  
+             </div>
+         </article>
+            </section>
+            <aside id="main-aside">
+                <div class="aside-list">
+                    <h3>즐겨찾기</h3>
+                    <ul>
+                        <li><a href="http://kostat.go.kr">통계청</a></li>
+                        <li><a href="http://bicdata.com">빅데이터</a></li>
+                        <li><a href="http://www.r-project.org/">R-project</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                    </ul>
+                </div>
+                <div class="aside-list">
+                    <h3>최근 글</h3>
+                    <ul>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <footer id="main-footer">
+            <a href="#">Created By HwangSeongwon</a>
+        </footer>
+    </div>
+</body>
+</html>
