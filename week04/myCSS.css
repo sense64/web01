@@ -1,0 +1,20 @@
+<style>
+        * { margin: 0;
+            font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+            
+             }
+        body{
+            width: 950px;
+            margin: 0px auto;
+            background-color: #E5e5e5;
+            color : white;
+        }
+        a { text-decoration: none; }
+        li { list-style: none; }
+        .navi a { color : orange; }
+        #page {
+            background-color: #252525;
+            margin : 40px 0px;
+            border-radius: 20px;
+        }
+</style>
